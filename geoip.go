@@ -2,8 +2,10 @@
 package geoip
 
 /*
-#cgo CFLAGS: -I/opt/local/include -I/usr/local/include -I/usr/include
-#cgo LDFLAGS: -lGeoIP -L/opt/local/lib -L/usr/local/lib -L/usr/lib
+#cgo linux CFLAGS: -I/opt/local/include -I/usr/local/include -I/usr/include
+#cgo darwin CFLAGS: -I/usr/local/include -I/usr/include
+#cgo linux LDFLAGS: -lGeoIP -L/opt/local/lib -L/usr/local/lib -L/usr/lib
+#cgo darwin LDFLAGS: -lGeoIP -L/usr/local/Cellar -L/usr/local/lib -L/usr/lib
 #include <stdio.h>
 #include <errno.h>
 #include <GeoIP.h>
